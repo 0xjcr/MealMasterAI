@@ -1,18 +1,19 @@
 import { describe, expect, test } from "vitest";
 import { render, screen } from "@testing-library/react";
-import LoginPage from "../../pages/LoginPage";
+import HomePage from "../../pages/HomePage";
 import { BrowserRouter, MemoryRouter } from "react-router-dom";
+import Profile from "../Profile";
+import { vi } from "vitest";
 
-describe("Login Page buttons", () => {
-  test("LoginPage should render two buttons", () => {
+describe("HomePage buttons", () => {
+  test("HomePage should render two buttons", () => {
     render(
-      <LoginPage>
-        <LoginButton />
+      <HomePage>
         <button />
-      </LoginPage>,
+        <button />
+      </HomePage>,
       { wrapper: BrowserRouter }
     );
-
     expect(screen.getAllByRole("button")).toHaveLength(2);
   });
 });

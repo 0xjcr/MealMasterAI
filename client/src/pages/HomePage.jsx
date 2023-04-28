@@ -9,13 +9,11 @@ const HomePage = () => {
       <div className="styleHomePage" style={{ paddingBottom: "80px" }}>
         <Link to="/">
           <img src={logo} alt="App Logo" className="app-logo" />
-          {/* <button>refresh</button> */}
+          <button>refresh</button>
         </Link>
         <h1>MealMasterAI</h1>
         <div className="buttonGroup">
-          <Link to="/create-meal">
-            <button>Create Diet</button>
-          </Link>
+          <Link to="/create-meal">{/* <button>Create Diet</button> */}</Link>
           <Link to="/dashboard">
             <button>Dashboard</button>
           </Link>
