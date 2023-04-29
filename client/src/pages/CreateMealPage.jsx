@@ -39,14 +39,14 @@ const CreateMealPage = () => {
 
           {!isLoading && (
             <div className="previous-data-container">
-              <h4 className="h2-background">YOUR PREVIOUS DIET PLANS</h4>
+              <h4 >YOUR PREVIOUS DIET PLANS</h4>
               <PreviousDataItem />
             </div>
           )}
         </div>
       </div>
      
-        <Profile />
+        {/* <Profile/> */}
       
     </>
   );

@@ -5,11 +5,12 @@
   margin: 5px;
   transform: scale(.8);
   color: black;
+  
 }
 
 .formStyle h2 {
   margin-bottom: 2vh;
-  max-height: 5vh !important;
+  max-height: 4vh !important;
 }
 
 .columns-container {

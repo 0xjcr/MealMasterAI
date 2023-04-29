@@ -12,7 +12,7 @@
     width: 25vw;
     margin-right: 10vw;
     margin-top: 15vh;
-    height: 60vh;
+    height: 80vh;
     color: black;
     border-radius: 8px;
     
@@ -26,7 +26,9 @@
   
   .homelink {
     position: absolute;
-    height: 5vh;
+    height: 4vh;
     left: 2vh;
     top:2vh;
   }
+
+  

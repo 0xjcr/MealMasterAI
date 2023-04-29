@@ -35,7 +35,7 @@
 
   .profilehomepage {
     position: fixed;
-    bottom: 20vh;
+    bottom: 1vh;
       display: inline-flex;
       align-items: center;
       justify-content: space-evenly;
