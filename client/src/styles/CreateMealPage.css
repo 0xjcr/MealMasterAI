@@ -4,7 +4,11 @@
     align-items: center;
   } */
 .form-and-data-container {
+  position: relative;
   display: flex;
+  height: 90%;
+  
+
 }
 
 .previous-data-container {
@@ -33,4 +37,5 @@
   height: 5vh;
   left: 2vh;
   top: 2vh;
+  z-index: 10000;
 }

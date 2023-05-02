@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import DietDisplay from "../components/DietDisplay";
 import { Link } from "react-router-dom";
 import { DietContext } from "../App";
+import Footer from "../components/Footer";
 import Spinner from "../components/Spinner";
 import Profile from "../components/Profile";
 import HomeIcon from "@mui/icons-material/Home";
@@ -67,7 +68,7 @@ const DietsPage = () => {
         )}
       </div>
 
-      <Profile />
+      <Footer/>
     </>
   );
 };
