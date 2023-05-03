@@ -21,7 +21,6 @@ const Profile = () => {
         </div>
         <LogoutButton />
       </div>
-      
     )}
     </>
   );

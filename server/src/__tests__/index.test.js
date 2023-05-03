@@ -17,6 +17,40 @@ describe('Test of the endpoints', () => {
     expect(response.body).toHaveProperty('title', 'test1');
   });
 
+  it('GET /meals/:id should return 404 if the meal does not exist', async () => {
+    const response = await request('http://localhost:3001').get('/meals/99999');
+    expect(response.status).toEqual(404);
+    expect(response.body).toHaveProperty('error', 'Meal not found');
+  });
+
+
+  it('DELETE /meals/:id should delete a meal', async () => {
+    // First, create a new meal for testing purposes
+    const testMeal = await prisma.mealInfo.create({
+      data: {
+        description: 'Beach Diet',
+         userId: 'github|122622286',
+        mealInfoId: 2,
+      },
+    });
+  
+    // Now, test the deletion of the created meal
+    const response = await request('http://localhost:3001')
+      .delete(`/meals/${meal.id}`);
+    expect(response.status).toEqual(204);
+  
+    // Verify that the meal has been deleted from the database
+    const deletedMeal = await prisma.mealInfo.findUnique({
+      where: { id: meal.id },
+    });
+    expect(deletedMeal).toBeNull();
+  });
+
+
+
+
+
+
   // it('DELETE /meals/:id delete the diet', async () => {
   //   const meal = await prisma.mealAI.create({
   //     data: {
@@ -31,6 +65,11 @@ describe('Test of the endpoints', () => {
   //   );
   //   expect(response.status).toEqual(204);
   // });
+
+
+
+
+
 
   it('PUT /meals/:id update title of the diet', async () => {
     const mealToUpdate = { title: 'test1' };

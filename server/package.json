@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "npx nodemon ./dist/index.js",
-    "test": "DATABASE_URL=postgresql://raulbarros:@localhost:5432/mealmasterai?schema=public jest",
+    "test": "DATABASE_URL=postgresql://jordan:@localhost:5433/mealmaster?schema=public jest",
     "build:dev": "tsc --watch"
   },
   "keywords": [],
